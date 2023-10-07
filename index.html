@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Fitness Buddy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onpageshow="userWelcomeMessage()">
+    <h1>Fitness Workout Generator</h1>
+
+    <h2 id="welcomeMessage">
+      <!-- User personalized welcome message will be output here when user enters name on body load -->
+    </h2>
+
+    <form id="workoutGeneratorForm">
+      <div class="exercise-checkbox">
+        <label for="cardio">Cardio</label>
+        <input class="workout-categories" type="checkbox" value="cardio" id="cardio" />
+
+        <label for="strength">Strength Training</label>
+        <input class="workout-categories" type="checkbox" value="strength" id="strength" />
+
+        <label for="lowerbody">Lower Body HIIT</label>
+        <input class="workout-categories" type="checkbox" value="lowerbody" id="lowerbody" />
+
+        <label for="upperbody">Upper Body HIIT</label>
+        <input class="workout-categories" type="checkbox" value="upperbody" id="upperbody" />
+
+        <label for="bodysplit">Body Split</label>
+        <input class="workout-categories" type="checkbox" value="bodysplit" id="bodysplit" />
+      </div>
+
+      <button type="button" id="generateButton" onclick="randomlyGenerateWorkoutProgram()">Generate Random Workout</button>
+
+      <button type="button" id="clearAllButton" onclick="clearAll()">Clear All</button>
+    </form>
+
+    <div id="generatedWorkoutProgram">
+      <!-- Generated workout program will be be output here in a list format -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
